@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link href="/src/style.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/img/favicon.png" />
+  <title>Как выглядит функция просмотра 3D-модели со стороны покупателя?</title>
+</head>
+<body>
+  <header x-data="{ open: false }" class="relative flex items-center justify-between py-4 px-4 text-gray-900">
+  <img src="/src/img/logo.svg" alt="WildAR Logo" class="h-12" loading="lazy">
+
+  <nav class="hidden md:block">
+    <ul class="flex space-x-8 font-light">
+      <li><a href="https://wildar.ru/#about">Преимущества</a></li>
+      <li><a href="https://wildar.ru/#process">Процесс</a></li>
+      <li><a href="https://wildar.ru/#showreel">Примеры</a></li>
+      <li><a href="https://wildar.ru/#prices">Тарифы</a></li>
+      <li><a href="https://wildar.ru/#blog">Блог</a></li>
+      <li><a href="https://wildar.ru/#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <div class="space-x-4 hidden md:flex">
+    <a href="https://t.me/alexandr_yannaev" target="_blank" rel="noopener noreferrer"><img src="/src/img/tg_icon.svg" alt="Telegram Logo" class="h-8" loading="lazy"></a>
+    <a href="https://wa.me/79024450444" target="_blank" rel="noopener noreferrer"><img src="/src/img/wa_icon.svg" alt="WhatsApp Logo" class="h-8" loading="lazy"></a>
+  </div>
+
+  <button @click="open = !open" @click.outside="open = false" class="block md:hidden text-3xl z-50 text-gray-900">
+    <i :class="open ? 'pi pi-times' : 'pi pi-bars'"></i>
+  </button>
+
+  <nav x-show="open" x-transition class="absolute top-full left-0 w-full bg-white shadow-lg md:hidden mt-0 rounded-b-4xl z-40">
+    <ul class="flex flex-col space-y-6 p-6 mb-4 font-semibold text-3xl text-center">
+      <li><a href="https://wildar.ru/#about">Преимущества</a></li>
+      <li><a href="https://wildar.ru/#process">Процесс</a></li>
+      <li><a href="https://wildar.ru/#showreel">Примеры</a></li>
+      <li><a href="https://wildar.ru/#prices">Тарифы</a></li>
+      <li><a href="https://wildar.ru/#blog">Блог</a></li>
+      <li><a href="https://wildar.ru/#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+
+
+
+</header>
+  <main class="">
+    <article class="prose mx-auto py-8 md:py-24 px-4 prose-lg">
+  <h1>Как выглядит функция просмотра 3D-модели со стороны покупателя?</h1>
+  <p>
+    Просмотр 3D-моделей доступен только в мобильном приложении Wildberries. Если в карточку товара загружена 3D-модель, то покупатель увидит специальную иконку.
+  </p>
+
+  <img
+          src="/src/img/Untitled6.png"
+          alt="Иконка 3D-модели"
+          loading="lazy"
+  />
+
+  <p>
+    При нажатии на иконку откроется просмотр товара в дополненной реальности.
+    Необходимо навести камеру смартфона на пол и расположить 3D-модель в нужном месте.
+  </p>
+  <img
+          src="/src/img/Untitled7.png"
+          alt="AR-просмотр"
+          loading="lazy"
+  />
+  <p>
+    Таким образом покупатель сможет оценить товар в своём интерьере в реальном масштабе и принять решение о покупке.
+  </p>
+</article>
+    <section class="pt-24 px-4 pb-24 bg-gray-950" id="contacts">
+  <div class="container max-w-7xl mx-auto space-y-14">
+    <h2 class="font-medium text-2xl sm:text-3xl text-gray-400">Контакты</h2>
+    <h3 class="font-semibold text-gray-50 text-4xl sm:text-7xl leading-none">Готовы начать?</h3>
+    <p class="max-w-2xl text-xl sm:text-2xl font-medium text-gray-400 leading-tight">Свяжитесь с нами, чтобы
+      <span class="text-gray-50">рассчитать стоимость и сроки создания дополненной реальности. </span>Мы всегда на связи и готовы ответить на ваши вопросы.</p>
+  </div>
+</section>
+    <section class="px-4 pb-24 bg-gray-950">
+  <div class="container max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+
+      <a href="mailto:alex@wildar.ru" class="bg-zinc-900 text-white p-8 rounded-xl flex flex-col items-center justify-between">
+        <p class="text-4xl font-medium mb-4 mt-4">alex@wildar.ru</p>
+        <h3 class="text-gray-400 text-xl font-medium">Email</h3>
+      </a>
+
+      <a href="https://t.me/alexandr_yannaev" target="_blank" rel="noopener noreferrer" class="bg-zinc-900 text-white p-8 rounded-xl flex flex-col">
+        <img src="/src/img/tg_icon.svg" alt="Telegram Logo" class="h-20 mb-4" loading="lazy">
+        <h3 class="text-gray-400 text-xl font-medium">Telegram</h3>
+      </a>
+
+      <a href="https://wa.me/79024450444" target="_blank" rel="noopener noreferrer" class="bg-zinc-900 text-white p-8 rounded-xl flex flex-col">
+        <img src="/src/img/wa_icon.svg" alt="WhatsApp Logo" class="h-20 mb-4" loading="lazy">
+        <h3 class="text-gray-400 text-xl font-medium">WhatsApp</h3>
+      </a>
+
+    </div>
+  </div>
+</section>
+    <section class="pt-4 px-4 pb-4 bg-gray-950">
+  <div class="container max-w-7xl mx-auto">
+    <p class="text-gray-50">© 2025 WildAR. Все права защищены.</p>
+  </div>
+
+</section>
+  </main>
+</body>
+</html>
